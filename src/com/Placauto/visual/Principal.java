@@ -9,6 +9,10 @@ import com.Placauto.visual.CadastroCliente;
 import com.Placauto.visual.CadastroFornecedor;
 import com.Placauto.visual.CadastroItens;
 import com.Placauto.visual.CadastroFuncionario;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Jonas
@@ -33,11 +37,14 @@ public class Principal extends javax.swing.JFrame {
 
         Desktop = new javax.swing.JDesktopPane();
         jMenu = new javax.swing.JMenuBar();
-        jMenuCadastrar = new javax.swing.JMenu();
+        jMenuClientes = new javax.swing.JMenu();
         jMenuCadastroCliente = new javax.swing.JMenuItem();
+        jMenuFornecedores = new javax.swing.JMenu();
         jMenuCadastrarFornecedor = new javax.swing.JMenuItem();
-        jMenuCadastrarItem = new javax.swing.JMenuItem();
+        jMenuFuncionario = new javax.swing.JMenu();
         jMenuCadastrarFuncionarios = new javax.swing.JMenuItem();
+        jMenuItens = new javax.swing.JMenu();
+        jMenuCadastrarItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Placauto");
@@ -53,7 +60,8 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 551, Short.MAX_VALUE)
         );
 
-        jMenuCadastrar.setText("Cadastrar");
+        jMenuClientes.setText("Clientes");
+        jMenuClientes.setName(""); // NOI18N
 
         jMenuCadastroCliente.setText("Cadastrar Cliente");
         jMenuCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -61,7 +69,11 @@ public class Principal extends javax.swing.JFrame {
                 jMenuCadastroClienteActionPerformed(evt);
             }
         });
-        jMenuCadastrar.add(jMenuCadastroCliente);
+        jMenuClientes.add(jMenuCadastroCliente);
+
+        jMenu.add(jMenuClientes);
+
+        jMenuFornecedores.setText("Fornecedores");
 
         jMenuCadastrarFornecedor.setText("Cadastrar Fornecedor");
         jMenuCadastrarFornecedor.addActionListener(new java.awt.event.ActionListener() {
@@ -69,15 +81,11 @@ public class Principal extends javax.swing.JFrame {
                 jMenuCadastrarFornecedorActionPerformed(evt);
             }
         });
-        jMenuCadastrar.add(jMenuCadastrarFornecedor);
+        jMenuFornecedores.add(jMenuCadastrarFornecedor);
 
-        jMenuCadastrarItem.setText("Cadastrar Itens");
-        jMenuCadastrarItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuCadastrarItemActionPerformed(evt);
-            }
-        });
-        jMenuCadastrar.add(jMenuCadastrarItem);
+        jMenu.add(jMenuFornecedores);
+
+        jMenuFuncionario.setText("Funcionários");
 
         jMenuCadastrarFuncionarios.setText("Cadastrar Funcionarios");
         jMenuCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
@@ -85,9 +93,21 @@ public class Principal extends javax.swing.JFrame {
                 jMenuCadastrarFuncionariosActionPerformed(evt);
             }
         });
-        jMenuCadastrar.add(jMenuCadastrarFuncionarios);
+        jMenuFuncionario.add(jMenuCadastrarFuncionarios);
 
-        jMenu.add(jMenuCadastrar);
+        jMenu.add(jMenuFuncionario);
+
+        jMenuItens.setText("Itens");
+
+        jMenuCadastrarItem.setText("Cadastrar Itens");
+        jMenuCadastrarItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuCadastrarItemActionPerformed(evt);
+            }
+        });
+        jMenuItens.add(jMenuCadastrarItem);
+
+        jMenu.add(jMenuItens);
 
         setJMenuBar(jMenu);
 
@@ -95,7 +115,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Desktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Desktop)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,7 +130,7 @@ public class Principal extends javax.swing.JFrame {
         CadastroCliente cc = new CadastroCliente();
         Desktop.add(cc);
         cc.setVisible(true);
-       
+
     }//GEN-LAST:event_jMenuCadastroClienteActionPerformed
 
     private void jMenuCadastrarFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarFornecedorActionPerformed
@@ -126,9 +146,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuCadastrarItemActionPerformed
 
     private void jMenuCadastrarFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarFuncionariosActionPerformed
-       CadastroFuncionario cadfunc = new CadastroFuncionario();
-       Desktop.add(cadfunc);
-       cadfunc.setVisible(true);
+        CadastroFuncionario cadfunc = new CadastroFuncionario();
+
+        Desktop.add(cadfunc);
+        cadfunc.setVisible(true);
+
+
     }//GEN-LAST:event_jMenuCadastrarFuncionariosActionPerformed
 
     /**
@@ -162,10 +185,9 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
-               
+
                 new Principal().setVisible(true);
-                
+
             }
         });
     }
@@ -173,10 +195,13 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane Desktop;
     private javax.swing.JMenuBar jMenu;
-    private javax.swing.JMenu jMenuCadastrar;
     private javax.swing.JMenuItem jMenuCadastrarFornecedor;
     private javax.swing.JMenuItem jMenuCadastrarFuncionarios;
     private javax.swing.JMenuItem jMenuCadastrarItem;
     private javax.swing.JMenuItem jMenuCadastroCliente;
+    private javax.swing.JMenu jMenuClientes;
+    private javax.swing.JMenu jMenuFornecedores;
+    private javax.swing.JMenu jMenuFuncionario;
+    private javax.swing.JMenu jMenuItens;
     // End of variables declaration//GEN-END:variables
 }
