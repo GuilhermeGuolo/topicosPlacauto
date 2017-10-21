@@ -6,6 +6,9 @@
 package com.Placauto.visual;
 
 import com.Placauto.actions.login_operacao;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,9 +16,12 @@ import com.Placauto.actions.login_operacao;
  */
 public class Login extends javax.swing.JFrame {
 
-   
-    public Login() {
-        initComponents();
+    public Login() throws IOException{
+      
+            
+            initComponents();
+            setarLogin();
+        
     }
 
     /**
@@ -121,20 +127,39 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtLoginSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtLoginSistemaActionPerformed
-        // TODO add your handling code here:
+
+
     }//GEN-LAST:event_jtLoginSistemaActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-        login_operacao login = new login_operacao();
-        boolean confirma = login.login_operacao(jtLoginSistema, jtSenhaSistema);
-        if(confirma == true){
-        dispose();}
-        else{
-            jtLoginSistema.setText("");
-            jtSenhaSistema.setText("");
+       
+        try {                                              
+            
+            //Instanciada classe login_operacao
+            login_operacao login = new login_operacao();
+            String logFile = "login.txt";
+            
+            try {
+                //chamando a classe salvarlogin
+                login.salvarLogin(jtLoginSistema.getText(), logFile);
+            } catch (IOException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            boolean confirma = login.login_operacao(jtLoginSistema, jtSenhaSistema);
+            if (confirma == true) {
+                dispose();
+            } else {
+                jtLoginSistema.setText("");
+                jtSenhaSistema.setText("");
+            }
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
+
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
@@ -176,8 +201,13 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
-                
+
+                try {
+                    new Login().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
             }
         });
     }
@@ -191,4 +221,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jtLoginSistema;
     private javax.swing.JPasswordField jtSenhaSistema;
     // End of variables declaration//GEN-END:variables
+
+    
+    //Funcao criada para conseguir Setar dentro do campo login
+    public void setarLogin() throws IOException{
+
+        login_operacao login = new login_operacao();
+        jtLoginSistema.setText(login.lerLoginSalvo());
+
+    }
+
 }
