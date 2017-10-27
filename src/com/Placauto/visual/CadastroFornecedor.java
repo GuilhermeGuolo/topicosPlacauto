@@ -7,9 +7,6 @@ package com.Placauto.visual;
 
 import com.Placauto.actions.ActionsFornecedor;
 import com.Placauto.modelos.Fornecedor;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
 
 /**
  *

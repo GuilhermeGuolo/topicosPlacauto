@@ -5,6 +5,7 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.classesAdversas.ControlerLog;
 import com.Placauto.modelos.Itens;
 import com.Placauto.visual.CadastroItens;
 import javax.swing.JOptionPane;
@@ -31,13 +32,16 @@ public class ActionsItens implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (cad.getJtIDitem().isEmpty() || cad.getJtNomeitem().isEmpty()
+       /* if (cad.getJtIDitem().isEmpty() || cad.getJtNomeitem().isEmpty()
                 || cad.getJtQuantitem().isEmpty() || cad.getJtTipoItem().isEmpty()
                 || cad.getJtFabricanteItem().isEmpty()) {
 
             JOptionPane.showMessageDialog(null, "Preencha os campos!!", "Alerta!!", JOptionPane.ERROR_MESSAGE);
 
-        } else if ("Salvar".equals(e.getActionCommand())) {
+        } else*/
+       
+        try {
+            if ("Salvar".equals(e.getActionCommand())) {
             
             this.item = cad.getItens();
 
@@ -50,6 +54,9 @@ public class ActionsItens implements ActionListener {
                     + "\n" + "Fabricante: " + item.getFabricanteItem()
             );
         }
+        } catch (NumberFormatException exep) {
+                new ControlerLog().writeStackTrace(exep);}
+       
 
      
     }

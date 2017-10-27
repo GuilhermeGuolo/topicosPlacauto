@@ -504,8 +504,8 @@ public class CadastroCliente extends javax.swing.JInternalFrame {
         return ufCliente.getSelectedItem().toString();
     }
 
-    public Cliente getCliente() {
-
+    public Cliente getCliente() throws NumberFormatException{
+        
         Cliente cli = new Cliente();
 
         cli.setIdCliente(Integer.parseInt(getJtIDcliente()));

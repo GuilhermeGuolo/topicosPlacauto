@@ -5,6 +5,7 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.classesAdversas.ControlerLog;
 import com.Placauto.modelos.Funcionario;
 import com.Placauto.visual.CadastroFuncionario;
 import java.awt.event.ActionEvent;
@@ -29,7 +30,7 @@ public class ActionsFuncionario implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (cf.getJtIdFuncionario().isEmpty() || cf.getJtNomeFuncionario().isEmpty() || cf.getSexoFuncionario().isEmpty()
+       /* if (cf.getJtIdFuncionario().isEmpty() || cf.getJtNomeFuncionario().isEmpty() || cf.getSexoFuncionario().isEmpty()
                 || cf.getJtCpfFuncionario().isEmpty() || cf.getJtDataRegistro().isEmpty() || cf.getJtRgFuncionario().isEmpty()
                 || cf.getUfFuncionario().isEmpty() || cf.getJtGraduacaoFuncionario().isEmpty() || cf.getJtTelefoneFuncionario().isEmpty()
                 || cf.getJtCelularFuncionario().isEmpty() || cf.getJtCidadeFuncionario().isEmpty() || cf.getJtBairroFuncionario().isEmpty()
@@ -37,7 +38,10 @@ public class ActionsFuncionario implements ActionListener {
 
             JOptionPane.showMessageDialog(null, "Insira todos os campos!!", "Alerta!!", JOptionPane.ERROR_MESSAGE);
 
-        } else if ("Salvar".equals(e.getActionCommand())) {
+        } else */
+       
+        try {
+            if ("Salvar".equals(e.getActionCommand())) {
 
             this.func = cf.getFuncionario();
 
@@ -59,6 +63,9 @@ public class ActionsFuncionario implements ActionListener {
             );
 
         }
+        } catch (NumberFormatException exep) {
+                new ControlerLog().writeStackTrace(exep);}
+       
 
     }
 }

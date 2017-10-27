@@ -5,6 +5,7 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.classesAdversas.ControlerLog;
 import com.Placauto.visual.Login;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
@@ -12,6 +13,7 @@ import javax.swing.JTextField;
 import com.Placauto.visual.Principal;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,7 +26,7 @@ import java.io.IOException;
 public class login_operacao {
 
     private final String senha = "";
-    private final String login = "";
+    private final String login = "joninhas";
 
     /**
      *
@@ -53,12 +55,15 @@ public class login_operacao {
 
         FileWriter fileWriter = new FileWriter(logFile, false);
 
+       
+        
         try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             String msg = mensagem + "\n";
             bufferedWriter.write(msg);
             bufferedWriter.flush();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erro ao salvar arquivo!" + e);
+        } catch (Exception exep) {
+            JOptionPane.showMessageDialog(null, "Erro ao salvar arquivo!" + exep);
+            new ControlerLog().writeStackTrace(exep);
         }
 
     }

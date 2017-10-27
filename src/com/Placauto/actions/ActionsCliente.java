@@ -5,11 +5,12 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.classesAdversas.ControlerLog;
+
 import com.Placauto.modelos.Cliente;
 import com.Placauto.visual.CadastroCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,7 +22,7 @@ public class ActionsCliente implements ActionListener {
     private final CadastroCliente cad;
 
     public ActionsCliente(CadastroCliente cad) {
-        
+
         this.cad = cad;
 
     }
@@ -29,7 +30,7 @@ public class ActionsCliente implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (cad.getJtIDcliente().isEmpty() || cad.getJtNomeCliente().isEmpty() || cad.getSexoCliente().isEmpty()
+        /*if (cad.getJtIDcliente().isEmpty() || cad.getJtNomeCliente().isEmpty() || cad.getSexoCliente().isEmpty()
                 || cad.getJtCpfCliente().isEmpty() || cad.getJtDataRegistro().isEmpty() || cad.getJtRgCliente().isEmpty()
                 || cad.getJtCidadeCliente().isEmpty() || cad.getJtBairroCliente().isEmpty() || cad.getJtLogradouroCliente().isEmpty()
                 || cad.getUfCliente().isEmpty() || cad.getJtNumeroImovel().isEmpty() || cad.getJtTelefoneCliente().isEmpty()
@@ -38,28 +39,31 @@ public class ActionsCliente implements ActionListener {
 
             JOptionPane.showMessageDialog(null, "Insira todos os campos!!", "Alerta!!", JOptionPane.ERROR_MESSAGE);
 
-        } else if ("Salvar".equals(e.getActionCommand())) {
+        } else */
+        if ("Salvar".equals(e.getActionCommand())) {
 
-            this.cli = cad.getCliente();
-
-            System.out.println("ID:" + cli.getIdCliente()
-                    + "\n" + "Nome: " + cli.getNomeCliente()
-                    + "\n" + "Sexo: " + cli.getSexoCliente()
-                    + "\n" + "CPF: " + cli.getCpfCliente()
-                    + "\n" + "Data Registro: " + cli.getDataRegistro()
-                    + "\n" + "RG: " + cli.getRgCliente()
-                    + "\n" + "CEP: " + cli.getCepCliente()
-                    + "\n" + "UF: " + cli.getUfCliente()
-                    + "\n" + "Cidade: " + cli.getCidadeCliente()
-                    + "\n" + "Bairro:" + cli.getBairroCliente()
-                    + "\n" + "Logradouro: " + cli.getLogradouroCliente()
-                    + "\n" + "Número Imóvel:" + cli.getNumImovel()
-                    + "\n" + "Telefone: " + cli.getTelCliente()
-                    + "\n" + "Celular: " + cli.getCelularCliente()
-                    + "\n" + "E-mail: " + cli.getEmailCliente()
-                    + "\n" + "Observação: " + cli.getObsCliente()
-            );
-
+            try {
+                this.cli = cad.getCliente();
+                System.out.println("ID:" + cli.getIdCliente()
+                        + "\n" + "Nome: " + cli.getNomeCliente()
+                        + "\n" + "Sexo: " + cli.getSexoCliente()
+                        + "\n" + "CPF: " + cli.getCpfCliente()
+                        + "\n" + "Data Registro: " + cli.getDataRegistro()
+                        + "\n" + "RG: " + cli.getRgCliente()
+                        + "\n" + "CEP: " + cli.getCepCliente()
+                        + "\n" + "UF: " + cli.getUfCliente()
+                        + "\n" + "Cidade: " + cli.getCidadeCliente()
+                        + "\n" + "Bairro:" + cli.getBairroCliente()
+                        + "\n" + "Logradouro: " + cli.getLogradouroCliente()
+                        + "\n" + "Número Imóvel:" + cli.getNumImovel()
+                        + "\n" + "Telefone: " + cli.getTelCliente()
+                        + "\n" + "Celular: " + cli.getCelularCliente()
+                        + "\n" + "E-mail: " + cli.getEmailCliente()
+                        + "\n" + "Observação: " + cli.getObsCliente()
+                );
+            } catch (NumberFormatException exep) {
+                new ControlerLog().writeStackTrace(exep);
+            }
         }
 
     }

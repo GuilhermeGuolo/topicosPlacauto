@@ -16,6 +16,13 @@ import java.util.logging.Logger;
  */
 public class Login extends javax.swing.JFrame {
 
+    /**
+     * @return the jtLoginSistema
+     */
+    public javax.swing.JTextField getJtLoginSistema() {
+        return jtLoginSistema;
+    }
+
     public Login() throws IOException{
       
             
@@ -141,16 +148,16 @@ public class Login extends javax.swing.JFrame {
             
             try {
                 //chamando a classe salvarlogin
-                login.salvarLogin(jtLoginSistema.getText(), logFile);
+                login.salvarLogin(getJtLoginSistema().getText(), logFile);
             } catch (IOException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            boolean confirma = login.login_operacao(jtLoginSistema, jtSenhaSistema);
+            boolean confirma = login.login_operacao(getJtLoginSistema(), jtSenhaSistema);
             if (confirma == true) {
                 dispose();
             } else {
-                jtLoginSistema.setText("");
+                getJtLoginSistema().setText("");
                 jtSenhaSistema.setText("");
             }
             
@@ -227,7 +234,7 @@ public class Login extends javax.swing.JFrame {
     public void setarLogin() throws IOException{
 
         login_operacao login = new login_operacao();
-        jtLoginSistema.setText(login.lerLoginSalvo());
+        getJtLoginSistema().setText(login.lerLoginSalvo());
 
     }
 

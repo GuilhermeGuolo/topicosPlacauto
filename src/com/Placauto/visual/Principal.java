@@ -5,13 +5,12 @@
  */
 package com.Placauto.visual;
 
-import com.Placauto.visual.CadastroCliente;
-import com.Placauto.visual.CadastroFornecedor;
-import com.Placauto.visual.CadastroItens;
-import com.Placauto.visual.CadastroFuncionario;
+import com.Placauto.classesAdversas.ControlerLog;
 import java.beans.PropertyVetoException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JInternalFrame;
 
 /**
  *
@@ -24,6 +23,36 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        this.setLocationRelativeTo(null);
+    }
+
+    public void comandoTela(JInternalFrame frame) {
+        boolean jaExiste = false;
+        try {
+            for (JInternalFrame internal : Desktop.getAllFrames()) {
+                if (internal.getClass().toString().equalsIgnoreCase(frame.getClass().toString())) {
+                    frame.setSelected(true);
+                    jaExiste = true;
+                } else {
+                    frame.setSelected(true);
+                }
+            }
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        if(jaExiste){
+            return;
+        }
+        
+        Desktop.add(frame);
+        frame.setVisible(true);
+        try {
+            ControlerLog log = new ControlerLog();
+            log.writeLog("log.txt", frame.getTitle());
+        } catch (Exception ex) {
+            new ControlerLog().writeStackTrace(ex);
+        }
     }
 
     /**
@@ -127,30 +156,61 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroClienteActionPerformed
+        /* ControlerLog control = new ControlerLog();
+        try {
+            control.writeLog("log.txt", "Cadastro de Cliente");
+        } catch (IOException ex) {
+            new ControlerLog().writeStackTrace(ex);
+        }
         CadastroCliente cc = new CadastroCliente();
         Desktop.add(cc);
-        cc.setVisible(true);
+        cc.setVisible(true);*/
+        
+        comandoTela(new CadastroCliente());
+
 
     }//GEN-LAST:event_jMenuCadastroClienteActionPerformed
 
     private void jMenuCadastrarFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarFornecedorActionPerformed
-        CadastroFornecedor cf = new CadastroFornecedor();
-        Desktop.add(cf);
-        cf.setVisible(true);
+//        ControlerLog control = new ControlerLog();
+//        try {
+//            control.writeLog("log.txt", "Cadastro de Fornecedor");
+//        } catch (IOException ex) {
+//            new ControlerLog().writeStackTrace(ex);
+//        }
+//        CadastroFornecedor cf = new CadastroFornecedor();
+//        Desktop.add(cf);
+//        cf.setVisible(true);
+//        
+        comandoTela(new CadastroFornecedor());
     }//GEN-LAST:event_jMenuCadastrarFornecedorActionPerformed
 
     private void jMenuCadastrarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarItemActionPerformed
+        /*ControlerLog control = new ControlerLog();
+        try {
+            control.writeLog("log.txt", "Cadastro de Itens");
+        } catch (IOException ex) {
+            new ControlerLog().writeStackTrace(ex);
+        }
         CadastroItens ci = new CadastroItens();
         Desktop.add(ci);
-        ci.setVisible(true);
+        ci.setVisible(true);*/
+        
+        comandoTela(new CadastroItens());
     }//GEN-LAST:event_jMenuCadastrarItemActionPerformed
 
     private void jMenuCadastrarFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarFuncionariosActionPerformed
+        /* ControlerLog control = new ControlerLog();
+        try {
+            control.writeLog("log.txt", "Cadastro de Funcionário");
+        } catch (IOException ex) {
+            new ControlerLog().writeStackTrace(ex);
+        }
         CadastroFuncionario cadfunc = new CadastroFuncionario();
-
         Desktop.add(cadfunc);
-        cadfunc.setVisible(true);
+        cadfunc.setVisible(true);*/
 
+        comandoTela(new CadastroFuncionario());
 
     }//GEN-LAST:event_jMenuCadastrarFuncionariosActionPerformed
 
