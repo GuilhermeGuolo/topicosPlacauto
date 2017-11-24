@@ -20,7 +20,8 @@ public class ActionsCliente implements ActionListener {
 
     private Cliente cli;
     private final CadastroCliente cad;
-
+ 
+   
     public ActionsCliente(CadastroCliente cad) {
 
         this.cad = cad;
