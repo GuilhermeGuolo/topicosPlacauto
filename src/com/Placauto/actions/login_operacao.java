@@ -25,8 +25,23 @@ import java.io.IOException;
  */
 public class login_operacao {
 
-    private final String senha = "";
-    private final String login = "joninhas";
+    public void setSenha(String senha){
+        this.senha = senha;
+        
+    }
+    public String getSenha(){
+        return senha;
+    }
+    public void setLogin(String login){
+        this.login = login;
+    }
+    public String getLogin(){
+        return login;
+    }
+    
+    
+    private String senha;
+    private String login;
 
     /**
      *
@@ -35,7 +50,7 @@ public class login_operacao {
      * @return
      */
     public boolean login_operacao(JTextField jtLoginSistema, JPasswordField jtSenhaSistema) throws IOException {
-
+        System.out.println(login+senha+"zuera");
         if (jtLoginSistema.getText().equals(login)) {
 
             if (jtSenhaSistema.getText().equals(senha)) {

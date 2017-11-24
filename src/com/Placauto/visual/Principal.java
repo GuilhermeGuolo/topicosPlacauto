@@ -64,6 +64,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         Desktop = new javax.swing.JDesktopPane();
         jMenu = new javax.swing.JMenuBar();
         jMenuClientes = new javax.swing.JMenu();
@@ -74,6 +75,8 @@ public class Principal extends javax.swing.JFrame {
         jMenuCadastrarFuncionarios = new javax.swing.JMenuItem();
         jMenuItens = new javax.swing.JMenu();
         jMenuCadastrarItem = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Placauto");
@@ -262,6 +265,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuClientes;
     private javax.swing.JMenu jMenuFornecedores;
     private javax.swing.JMenu jMenuFuncionario;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu jMenuItens;
     // End of variables declaration//GEN-END:variables
 }

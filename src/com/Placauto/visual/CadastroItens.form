@@ -80,6 +80,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="botaoSalvarItens" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="botaoBusca" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="183" max="32767" attributes="0"/>
@@ -115,7 +117,10 @@
                       <Component id="jtFabricanteItem" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                  <Component id="botaoSalvarItens" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botaoSalvarItens" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botaoBusca" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace pref="85" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -167,6 +172,14 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="botaoSalvarItens.addActionListener(l);"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="botaoBusca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Busca"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoBuscaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

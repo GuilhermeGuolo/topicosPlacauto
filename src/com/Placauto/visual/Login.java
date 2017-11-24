@@ -6,6 +6,7 @@
 package com.Placauto.visual;
 
 import com.Placauto.actions.login_operacao;
+import com.Placauto.banco.Controle_Login;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -139,11 +140,15 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jtLoginSistemaActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-       
+    
+        
+                Controle_Login con = new Controle_Login();
+                login_operacao login = con.getPassword(getJtLoginSistema().getText());
+        
         try {                                              
             
             //Instanciada classe login_operacao
-            login_operacao login = new login_operacao();
+            //login_operacao login = new login_operacao();
             String logFile = "login.txt";
             
             try {
@@ -232,7 +237,7 @@ public class Login extends javax.swing.JFrame {
     
     //Funcao criada para conseguir Setar dentro do campo login
     public void setarLogin() throws IOException{
-
+        
         login_operacao login = new login_operacao();
         getJtLoginSistema().setText(login.lerLoginSalvo());
 

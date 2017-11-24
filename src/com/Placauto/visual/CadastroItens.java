@@ -8,6 +8,7 @@ package com.Placauto.visual;
 import com.Placauto.actions.ActionsItens;
 import com.Placauto.modelos.Itens;
 
+
 /**
  *
  * @author Guilherme
@@ -36,6 +37,7 @@ public class CadastroItens extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jtFabricanteItem = new javax.swing.JTextField();
         botaoSalvarItens = new javax.swing.JButton();
+        botaoBusca = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -58,6 +60,13 @@ public class CadastroItens extends javax.swing.JInternalFrame {
         botaoSalvarItens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSalvarItensActionPerformed(evt);
+            }
+        });
+
+        botaoBusca.setText("Busca");
+        botaoBusca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoBuscaActionPerformed(evt);
             }
         });
 
@@ -94,7 +103,9 @@ public class CadastroItens extends javax.swing.JInternalFrame {
                         .addComponent(jtFabricanteItem, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(botaoSalvarItens)))
+                        .addComponent(botaoSalvarItens)
+                        .addGap(18, 18, 18)
+                        .addComponent(botaoBusca)))
                 .addContainerGap(183, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -121,7 +132,9 @@ public class CadastroItens extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5)
                     .addComponent(jtFabricanteItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(72, 72, 72)
-                .addComponent(botaoSalvarItens)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoSalvarItens)
+                    .addComponent(botaoBusca))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
 
@@ -144,8 +157,14 @@ public class CadastroItens extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_botaoSalvarItensActionPerformed
 
+    private void botaoBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBuscaActionPerformed
+BuscaItens b = new BuscaItens();
+b.setVisible(true);
+    }//GEN-LAST:event_botaoBuscaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoBusca;
     private javax.swing.JButton botaoSalvarItens;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -5,6 +5,7 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.banco.FornecedorDao;
 import com.Placauto.classesAdversas.ControlerLog;
 import com.Placauto.modelos.Fornecedor;
 import com.Placauto.visual.CadastroFornecedor;
@@ -44,8 +45,8 @@ public class ActionsFornecedor implements ActionListener {
                 if ("Salvar".equals(e.getActionCommand())) {
 
                     this.fornec = cad.getFornecedor();
-
-                    System.out.println("ID:" + fornec.getIdFornecedor()
+                    FornecedorDao.insert(fornec);
+                   /* System.out.println("ID:" + fornec.getIdFornecedor()
                             + "\n" + "Nome: " + fornec.getNomeFornecedor()
                             + "\n" + "CNPJ: " + fornec.getCnpjFornecedor()
                             + "\n" + "Data Registro: " + fornec.getDataRegistro()
@@ -59,7 +60,7 @@ public class ActionsFornecedor implements ActionListener {
                             + "\n" + "Celular: " + fornec.getCelularFornecedor()
                             + "\n" + "E-mail: " + fornec.getEmailFornecedor()
                             + "\n" + "Observação: " + fornec.getObsFornecedor()
-                    );
+                    );*/
 
                 }
         } catch (NumberFormatException exep) {

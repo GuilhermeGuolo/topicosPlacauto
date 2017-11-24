@@ -1,0 +1,288 @@
+﻿Fri Oct 27 20:08:33 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:21:33 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:22:20 BRST 2017 : O Funcionário joninhas Está acessando 11 Cadastro de Cliente
+
+Fri Oct 27 20:22:26 BRST 2017 : O Funcionário joninhas Está acessando 11 Cadastro de Fornecedor
+
+Fri Oct 27 20:25:31 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:25:34 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 20:26:15 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:26:21 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 20:33:54 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:33:55 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:34:42 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:34:43 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:39:22 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:39:23 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:41:41 BRST 2017 : O Funcionário joninhas Está acessando 11 Cadastro de Cliente
+
+Fri Oct 27 20:41:43 BRST 2017 : O Funcionário joninhas Está acessando 11 Cadastro de Fornecedor
+
+Fri Oct 27 20:41:51 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:41:52 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:42:41 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:42:42 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:43:10 BRST 2017 : O Funcionário joninhas Está acessando Cadastro Funcionário
+
+Fri Oct 27 20:43:12 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:43:25 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:43:27 BRST 2017 : O Funcionário joninhas Está acessando Cadastro Funcionário
+
+Fri Oct 27 20:45:51 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:46:02 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:46:56 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:47:03 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:47:27 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:47:28 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:48:00 BRST 2017 : O Funcionário joninhas Está acessando Cadastro Funcionário
+
+Fri Oct 27 20:48:04 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Fri Oct 27 20:53:18 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:53:20 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:53:38 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:53:39 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:53:43 BRST 2017 : O Funcionário joninhas Está acessando Cadastro Funcionário
+
+Fri Oct 27 20:53:44 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Fri Oct 27 20:56:17 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:56:19 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:56:33 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:56:35 BRST 2017 : O Funcionário joninhas Está acessando java.lang.NumberFormatException: For input string: "a"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.Placauto.visual.CadastroCliente.getCliente(CadastroCliente.java:511)
+	at com.Placauto.actions.ActionsCliente.actionPerformed(ActionsCliente.java:46)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:90)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+
+Fri Oct 27 20:57:19 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:57:20 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 20:58:01 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 20:58:02 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:04:20 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:04:21 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:07:07 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:07:40 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:11:14 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:11:15 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:13:03 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:13:21 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:17:10 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:17:11 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:17:44 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:17:45 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:20:24 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:20:25 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:21:07 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:21:09 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:21:25 BRST 2017 : O Funcionário joninhas Está acessando Cadastro Funcionário
+
+Fri Oct 27 21:25:43 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:25:44 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:26:05 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:26:06 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:27:44 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:27:45 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:29:18 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:29:19 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:30:25 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:30:26 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:30:28 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:30:34 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:30:41 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:30:44 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:32:46 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:32:48 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Fri Oct 27 21:32:50 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedor
+
+Fri Oct 27 21:33:18 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Fornecedores
+
+Fri Oct 27 21:33:21 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+
+Wed Nov 22 12:09:23 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Wed Nov 22 12:13:35 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Wed Nov 22 12:18:56 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Wed Nov 22 12:22:58 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:08:04 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:15:24 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:24:38 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:27:11 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:29:51 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:34:09 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:36:17 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:37:34 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:37:35 BRST 2017 : O Funcionário joninhas Está acessando java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.Placauto.visual.CadastroItens.getItens(CadastroItens.java:187)
+	at com.Placauto.actions.ActionsItens.actionPerformed(ActionsItens.java:51)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+
+Thu Nov 23 10:45:51 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 10:54:47 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 11:00:19 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 11:06:14 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 15:38:51 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 15:45:23 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de itens
+
+Thu Nov 23 15:56:00 BRST 2017 : O Funcionário joninhas Está acessando Cadastro de Cliente
+

@@ -5,6 +5,7 @@
  */
 package com.Placauto.actions;
 
+import com.Placauto.banco.FuncionarioDao;
 import com.Placauto.classesAdversas.ControlerLog;
 import com.Placauto.modelos.Funcionario;
 import com.Placauto.visual.CadastroFuncionario;
@@ -44,8 +45,9 @@ public class ActionsFuncionario implements ActionListener {
             if ("Salvar".equals(e.getActionCommand())) {
 
             this.func = cf.getFuncionario();
+            FuncionarioDao.insert(func);
 
-            System.out.println("ID:" + func.getIdFuncionario()
+           /* System.out.println("ID:" + func.getIdFuncionario()
                     + "\n" + "Nome: " + func.getNomeFuncionario()
                     + "\n" + "Sexo: " + func.getSexoFuncionario()
                     + "\n" + "CPF: " + func.getCpfFuncionario()
@@ -60,7 +62,7 @@ public class ActionsFuncionario implements ActionListener {
                     + "\n" + "Bairro: " + func.getBairroFuncionario()
                     + "\n" + "Logradouro: " + func.getLogradouroFuncionario()
                     + "\n" + "Numero imovel: " + func.getNumImovel()
-            );
+            );*/
 
         }
         } catch (NumberFormatException exep) {
